@@ -60,3 +60,46 @@ wsl --set-default-version 2
 
 [MS Store](https://aka.ms/wslstore)을 통해 각종 배포판을 설치할 수 있다.
 
+
+
+## 6. WSL 버전 확인 및 버전 설정
+
+```powershell
+wsl --list --verbose
+  NAME                   STATE           VERSION
+* Ubuntu                 Running         1
+```
+
+PowerShell 혹은 CMD 상에서 위 명령어를 입력시 설치된 리눅스 배포판과 버전이 나타난다.
+
+```
+wsl --set-version <distribution name> <versionNumber>
+```
+
+위의 명령어와 같이 배포판관 버전을 설정해주어 변경한다.
+
+```powershell
+  NAME                   STATE           VERSION
+* Ubuntu                 Running         2
+```
+
+변경되면 다시 명령어를 입력했을 때 다음과 같이 나타난다.
+
+
+
+## 7. WSL 종료 방법
+
+WSL을 실행시키게 되면 창을 끄더라도 따로 종료시키지 않는 한 계속해서 실행되어 있는다.
+
+종료시 다음과 같은 명령어를 사용해 종료가 가능하다.
+
+```powershell
+wsl -t Ubuntu
+```
+
+위 명령어에서 'Ubuntu' 대신 배포판 이름에 해당하는 문자열을 넣어 실행시키면 종료되며 확인시 다음과 같이 나타난다.
+
+```powershell
+  NAME                   STATE           VERSION
+* Ubuntu                 Stopped         2
+```
