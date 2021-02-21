@@ -74,6 +74,7 @@ PowerShell 혹은 CMD 상에서 위 명령어를 입력시 설치된 리눅스 �
 
 ```
 wsl --set-version <distribution name> <versionNumber>
+wsl --set-default-version 2
 ```
 
 위의 명령어와 같이 배포판관 버전을 설정해주어 변경한다.
